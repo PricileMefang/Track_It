@@ -60,14 +60,23 @@ a { text-decoration: none; color: inherit; }
 button { font-family: inherit; cursor: pointer; }
 
 /* ============================================================
+   DASHBOARD CONTAINER
+   ============================================================ */
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ============================================================
    SIDEBAR
    ============================================================ */
 #sidebar {
   width: var(--sidebar-w);
   background: var(--bg-sidebar);
-  position: fixed;
-  top: 0; left: 0;
-  height: 100vh;
+  height: 100%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   z-index: 100;
@@ -159,11 +168,12 @@ button { font-family: inherit; cursor: pointer; }
    MAIN LAYOUT WRAPPER
    ============================================================ */
 .main-wrapper {
-  margin-left: var(--sidebar-w);
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .main-wrapper > :not(#top-bar) {
@@ -194,7 +204,7 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 
 .top-bar-content h1 {
@@ -701,9 +711,16 @@ table.trackit-table {
 
 @media (max-width: 768px) {
   :root { --sidebar-w: 0px; }
-  #sidebar { transform: translateX(-260px); transition: transform 0.3s; }
-  #sidebar.open { transform: translateX(0); width: 260px; }
-  .main-wrapper { margin-left: 0; }
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-260px);
+    transition: transform 0.3s;
+    width: 260px;
+  }
+  #sidebar.open { transform: translateX(0); }
   .stats-grid { padding: 1rem; grid-template-columns: 1fr 1fr; }
   .page-body { padding: 1rem; }
   #summary-cards { padding: 1rem; }
