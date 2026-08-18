@@ -1,0 +1,55 @@
+#navbarNav{
+    background-color:#49BF4E ;
+    border: 10% 5% 10% ;
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-item{
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+}
+.nav-link {
+    color: white;
+}
+.nav-link:hover{
+    color: #488DDD;
+}
+.primary button{
+    color: white;
+    border-color: white;
+   margin-left: auto;
+   margin-right: 20px;
+}
+.secondary button{
+    color: white;
+    border-color: white;
+    margin-left: auto;
+    margin-right: 50px;
+}
+.features-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 20px 10px 20px 10px;
+}
+.cardcard-light{
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+.cardcard-dark{
+    background-color: #343a40;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.icon{
+    font-size: 40px;
+    margin-bottom: 10px;
+}

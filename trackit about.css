@@ -1,0 +1,113 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Matura MT Capitals Regular;
+}
+
+
+/* Header Container */
+#main-header {
+    display: flex;
+    justify-content: space-between; /* Pushes logo and nav to opposite ends */
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px #5C60F1; /* Subtle shadow like in the image */
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    color: #333;
+    align-items: center;
+    gap: 30px; /* Space between links */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.nav-menu a:hover{
+    color: #488DDD;
+}
+
+/* Button Styling (Get Started) */
+#Sbtn-get-started {
+    background-color: #5C60F1; /* Orange color from the image */
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    .mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    gap: 60px;
+}
+
+/* Text Content Area */
+.mission-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.mission-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2d3e50;
+}
+
+.mission-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Image Area with Decorative Shape */
+.mission-image {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.mission-image img {
+    width: 100%;
+    max-width: 550px;
+    /* This creates the blob-like shape seen in the image */
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    object-fit: cover;
+}
+
+.signature {
+    margin-top: 15px;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .mission-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
